@@ -1,0 +1,1 @@
+Here I look at creating a NodeJS authentication systems and storing data using other memory location other than a database. In this case I make use of global variables.
