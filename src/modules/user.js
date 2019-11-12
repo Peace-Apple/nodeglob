@@ -1,6 +1,7 @@
 import Router from 'express';
 import _ from 'lodash';
 import bcrypt from 'bcrypt';
+import uuid from 'uuid';
 
 const router = Router();
 
@@ -64,7 +65,8 @@ router.post('/login', async(req, res) => {
     }
     return res.status(200).json({
       success: true,
-      message: 'You have successfully logged in'
+      message: 'You have successfully logged in',
+      token: uuid.v4()
     });
 
   } catch(error){
